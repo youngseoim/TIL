@@ -11,30 +11,30 @@
 
 * 디자인적 요소가 아닌 검색최적화 및 코드의 가독성을 위해서 semantic은 최대한 활용할 것  
 
-|  의미 요소   |                             설명                             |
-| :----------: | :----------------------------------------------------------: |
-|   <header>   | HTML 문서나 섹션(section) 부분에 대한 헤더(header)를 정의함. |
-|    <nav>     | HTML 문서 사이를 탐색할 수 있는 링크(link)의 집합을 정의함.  |
-|    <main>    |          HTML 문서의 주요 콘텐츠(content)를 정의함.          |
-|  <section>   |          HTML 문서에서 섹션(section) 부분을 정의함.          |
-|  <article>   |  HTML 문서에서 독립적인 하나의 기사(article) 부분을 정의함.  |
-|   <aside>    |  HTML 문서에서 페이지 부분 이외의 콘텐츠(content)를 정의함.  |
-|   <figure>   | HTML 문서에서 그래픽과 비디오 등의 독립적인 콘텐츠(content)를 정의함. |
-| <figcaption> |              figure 요소를 위한 캡션을 정의함.               |
-|   <footer>   | HTML 문서나 섹션(section) 부분에 대한 푸터(footer)를 정의함. |
-|    <bdi>     |  기본 출력방향과는 다른 방향으로 출력되는 텍스트를 정의함.   |
-|    <mark>    |                하이라이팅된 텍스트를 정의함.                 |
-|  <details>   |    사용자가 보거나 숨길 수 있는 추가적인 설명문을 정의함.    |
-|  <summary>   |             details 요소에 나타날 내용을 정의함.             |
-|   <dialog>   |    다이얼로그(dialog) 박스나 다이얼로그 윈도우를 정의함.     |
-|  <menuitem>  | 사용자가 팝업 메뉴(popup menu)를 통해 선택할 수 있는 메뉴의 아이템(menu item)을 정의함. |
-|   <meter>    |            정해진 범위 내의 스칼라 치수를 정의함.            |
-|  <progress>  |               작업에 대한 진행 정도를 정의함.                |
-|    <ruby>    |                  루비(ruby) 문자를 선언함.                   |
-|     <rt>     |               본문 위에 나타날 문자를 정의함.                |
-|     <rp>     | 루비(ruby) 문자를 지원하지 않는 브라우저에서만 나타날 내용을 정의함. |
-|    <time>    |                    날짜와 시간을 정의함.                     |
-|    <wbr>     | br 요소와는 달리 긴 단어가 화면의 맨 끝에 오면 상황에 따라 줄 바꿈 할 곳을 미리 정의함. |
+| 의미 요소  | 설명                                                         |
+| ---------- | :----------------------------------------------------------- |
+| header     | HTML 문서나 섹션(section) 부분에 대한 헤더(header)를 정의함. |
+| nav        | HTML 문서 사이를 탐색할 수 있는 링크(link)의 집합을 정의함.  |
+| main       | HTML 문서의 주요 콘텐츠(content)를 정의함.                   |
+| section    | HTML 문서에서 섹션(section) 부분을 정의함.                   |
+| article    | HTML 문서에서 독립적인 하나의 기사(article) 부분을 정의함.   |
+| aside      | HTML 문서에서 페이지 부분 이외의 콘텐츠(content)를 정의함.   |
+| figure     | HTML 문서에서 그래픽과 비디오 등의 독립적인 콘텐츠(content)를 정의함. |
+| figcaption | figure 요소를 위한 캡션을 정의함.                            |
+| footer     | HTML 문서나 섹션(section) 부분에 대한 푸터(footer)를 정의함. |
+| bdi        | 기본 출력방향과는 다른 방향으로 출력되는 텍스트를 정의함.    |
+| mark       | 하이라이팅된 텍스트를 정의함.                                |
+| details    | 사용자가 보거나 숨길 수 있는 추가적인 설명문을 정의함.       |
+| summary    | details 요소에 나타날 내용을 정의함.                         |
+| dialog     | 다이얼로그(dialog) 박스나 다이얼로그 윈도우를 정의함.        |
+| menuitem   | 사용자가 팝업 메뉴(popup menu)를 통해 선택할 수 있는 메뉴의 아이템(menu item)을 정의함. |
+| meter      | 정해진 범위 내의 스칼라 치수를 정의함.                       |
+| progress   | 작업에 대한 진행 정도를 정의함.                              |
+| ruby       | 루비(ruby) 문자를 선언함.                                    |
+| rt         | 본문 위에 나타날 문자를 정의함.                              |
+| rp         | 루비(ruby) 문자를 지원하지 않는 브라우저에서만 나타날 내용을 정의함. |
+| time       | 날짜와 시간을 정의함.                                        |
+| wbr        | br 요소와는 달리 긴 단어가 화면의 맨 끝에 오면 상황에 따라 줄 바꿈 할 곳을 미리 정의함. |
 
 #### 웹 접근성과 웹표준 ( HTML5, CSS3 )
 
@@ -60,7 +60,7 @@
 #### HTML5 Outline
 
 - 화면으로 보면 아무런 차이가 없어 보이지만 HTML5는 기존의 HTML 4.01나 XHTML 1.0과는 다른 점이 있습니다, 눈으로 보이지 않는 어떤 구조가 자동으로 생겨나고. 눈에 보이지 않기 때문에 '암묵적인 구조 생성'이라고 기존에도 존재했었는데 이것은 HTML5에서는  아웃라인(outline) 개념을 도입했기 때문에 나타나는 현상입니다.
-- HTML5 Outliner 웹 서비스 페이지(http://gsnedders.html5.org/outliner/) ㅡㅡ> 아웃라인구조 한눈에 확인하기
+- HTML5 Outliner 웹 서비스 페이지(http://gsnedders.html5.org/outliner/) ㅡㅡ 아웃라인구조 한눈에 확인하기
 - HTML4.01과 XHTML1.0에서는 문서트리구조로 표현되고 html 에서 head,body로 가지가 뻗어 나가고 그 둘의 각자 영역에서 자식과 자손을 포함하는 관계도(model)을 만듭니다, 이러한 관계를 문서 객체 모델(Document Object Model) 줄여서 DOM으로 부릅니다 
 - 이때문에 body안에 있는 태그들의 부모,형제,자식 요소들의 랜더링 방식이 HTML5와는 달라집니다.
 - 주의 할 점은 Semantic 태그들의 목적이 분명하기 때문에  목적에 맞게 써야하고 각 섹션은 내부에 제목을 하나만 가집니다 두개를 가지게 된다면 제목의 레벨에 따라서 형제섹션 2개로 나눠 집니다.
@@ -92,7 +92,7 @@ s,c 스네이크 케이스 = main_content = 중간에 언더바를 사용
 - OOCSS (Object Oriented CSS)
 - BEM (Block Element Modifier)
 - SMACSS (Scalable and Modular Architecture for CSS
-- https://github.com/hohoya33/css-methodologies.  ㅡㅡ> 방법론 정리 
+- https://github.com/hohoya33/css-methodologies.  ㅡㅡ 방법론 정리 
 
 #### 그 외에 배운 것
 
@@ -108,7 +108,7 @@ s,c 스네이크 케이스 = main_content = 중간에 언더바를 사용
 
   * Embadded imternal
 
-    * html문서에 body 제일상단이나 하단에 <style></style>을 지정해서 쓰는 방법
+    * html문서에 body 제일상단이나 하단에 style/style을 지정해서 쓰는 방법
 
       inline보다 쉬운 유지보수, style 블럭이 별도로 있어서 코드 가독성이 쉽다
 
