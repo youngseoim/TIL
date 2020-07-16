@@ -9,31 +9,51 @@
   - placeholder = 사용자가 무엇을 입력해야 하는지 알려주는 보조도구 
   - Placeholder 에는 유효성검사를위해 required태그가 필요하다 
 
+- text-transform: uppercase; = 상속된 내용 모두대문자로 변경 
+
+  Font-variant : small- caps = 폰트가 작은 대문자로 바꾸는속성
+
+   
+
+#### 어제내용 복습 
+
+padding과 margin의 차이 : padding 은내장지방 margin 내영역에 접근금지
+
+## Box-sizing:border-box (auto값:content-box)
+
+### content-box
+
+<img width="665" alt="스크린샷 2020-07-16 오후 8 41 15" src="https://user-images.githubusercontent.com/68043654/87667157-d3c9c080-c7a4-11ea-83f0-64af83e00c01.png">
+
+- 태그에 box-sizing 값을 할당해주지 않으면 auto 값은 content 박스가된다
+- Content-box는  margin, padding,border 등 모든 값을 포함한다
+- 위의 박스처럼 width,height 값을 100px을 지정해줬을때 border:2px의 값이 추가되니까 박스모델의 전체사이즈가 104px로 증가했다
+
+### border-box
+
+<img width="665" alt="스크린샷 2020-07-16 오후 8 44 37" src="https://user-images.githubusercontent.com/68043654/87667434-4b97eb00-c7a5-11ea-9818-30dcd28a9b2b.png">
+
+- Border-box는 padding,border 어떤값을 줘도 100px에서 커지지 않는
+
   
 
-복습 
-
-box model boder 마진은 더해지고 나머지는 포함한다 
-
-Content box 다 포함한다 
-
-margin nomal 플로우 상태일떄 마진의 상하가 겹친다 auto 키워드 가지고 , 음수값도 가진다
-
-padding 음수 값 못가진다 
-
-네거티브 마진 음수값에대한 내용
-
- float 부유시켜서 배치 레이아웃용도로나온게아니라서 문제점이있고 다양한 해결방법을 고민해야한다
-
-flex  = display 의 값 
+  ### content, border - box 둘다 margin은 바깥영역이니까 박스내부에는 영향 x 
 
 
 
-----
+#### 마크업시 고려해야 할 점 
 
-position 
+- btn 같은 태그는 html이 랜더링하는 순서를 생각해서 배치를 해야 정보를 읽고 나서 submit이 어느정보를 읽고난다음에 버튼을 눌러서 submit 이되야하는지 
 
-btn 같은 거 랜더링하는 순서를 생각해서 마크업을 해라 어느정보를 읽고난다음에 버튼을 눌러서 submit 이되야하는지 
+- a 태그에서 Lole = " button " 속성을 이용해서 버튼역할도 가능하다 .
+
+- a 태그로 버튼 태그를 선택한 경우 클릭하기 편하도록 사이즈를 키워준다 (사용자 접근성)
+
+- Overflow:hidden속성과 그 외 숨김요소 사용 방법 
+
+  1. Text-decoration:none; 이나 Top:-9999px 를 주면 안되는 이유는 = 보이스오버 기능을 사용할때 문서를 읽어들이다가 top좌표로 스크롤이 올라가버리기 때문에
+
+  2. m: -1px; / clip-path : 함수 polygon (0 0, 00, 00 ) 함수를 이용해 마스크 처리해서 화면에서 감춘다 clip path maker search
 
 #### 이미지넣을때 고려할 내용
 
@@ -45,62 +65,52 @@ btn 같은 거 랜더링하는 순서를 생각해서 마크업을 해라 어느
 
 
 
-k-wcag
+### Display : inline block 
 
-static positio 기본속성 정적인 
-
-border -radius 를 랜더링 하는 방식 
-
-Display : inline block 을 사용하면 인라인 블록 사이에 공백 문자가 생긴다 (이것도 옛날문법)
-
-- ​	html 을 작성할때 가독성을 위해 엔터키를 누른것이 랜더링 시 인라인블럭 에서는 공백요소로 해석이됐다 
-
-li tag 는 상속을 활용해라 
-
-  text-transform: uppercase; >> 상속된거 모두대문자 , 
-
-Font-variant : small- caps = 폰트가 작은 대문자로 바꾸는속성 
-
-a 태그가 걸린경우 클릭하기 편하도록 사이즈를 키워준다 
-
-inline block으로 만든거  flex , float 이용해보기 
+- html 을 작성할때 가독성을 위해 엔터키를 누른것이 랜더링 시 인라인블럭 에서는 공백으로 해석이되기 때문에
+- 요소들이 의도치 않게 떨어질 수 있다 
 
 
 
-po:a 
+#### Float 속성에 영향을 받는 하위요소에 position 값을 줘서 배치를 시킬 때
 
-w,h : 1px >>최소 1px을 줘야 개체로 인식을한다 
+````html
+<ul class="menu clearfix">
+          <li class="menu-item menu-act">
+            <button type="button" class="btn-menu">HTML에 대해</button>
+            <ul class="sub-menu sub-menu1">
+              <li><a href="#">HTML 5소개</a></li>
+              <li><a href="#">레퍼런스 소개</a></li>
+              <li><a href="#">활용 예제</a></li>
+            </ul>
+          </li>
+````
 
-Overflow:hidden >>
-
-Top:-9999px >>를 주면 안되는 이유는 = 보이스오버 기능을 사용할때 문서를 읽어들이다가 top좌표로 스크롤이 올라가버린다
-
-m: -1px; / clip-path : 함수 polygon (0 0, 00, 00 ) 마스크 처리를해서 화면에서 감춘다 clip path maker search
-
-
-
-List -style : 머지
-
-a태그에서 lole " button "도 가능
-
-
-
-#### Float 속성에 영향을 받는 하위요소에 position 값을 주지 않았을 때 벌어질 수 있는 문제
+위의 코드와 같은 구성으로 menu clearfix 에 6가지 요소가 있고 
 
 <img width="876" alt="스크린샷 2020-07-16 오후 7 32 33" src="https://user-images.githubusercontent.com/68043654/87664315-ff967780-c79f-11ea-924c-b05652b3a7ad.png">
 
+```css
+.menu-item{
+  float: left;
+}
+```
 
+menu-item에 float : left 속성 값을 줬을때  menu-item 의 자식 요소인 list들이 float:left 속성이 같이 먹어서 list들의 가로너비를 인식해서 이런식으로 인식해서 menu-item들의 정렬이 이루어 지지 않고 오른쪽으로 밀려 최대 width 값을 벗어나 아래로 내려오는 현상이 생겼는데 이때
 
-menu-item 들을 float : left 속성 값을 줬을때  menu-item 의 자식 요소인 list들이 float:left 속성이 같이 먹어서 list들의 가로너비를 인식 이런식으로 원하는 menu-item들의 정렬이 이루어 지지 않고 오른쪽으로 밀려 최대 width 값을 벗어나 아래로 내려오는 현상이 생겼는데 이때 li 요소들한테 position absolute 값을 주면 
+```CSS
+.sub-menu{
+  position: absolute;
+}
+```
+
+이런식으로 하위 요소에 absolute값을 부여해 주면 상위요소인 menu-item에 주는 영향이 사라지면서 아래그림 처럼
 
 <img width="920" alt="스크린샷 2020-07-16 오후 7 50 25" src="https://user-images.githubusercontent.com/68043654/87664356-0e7d2a00-c7a0-11ea-9e78-19a00f3ffa16.png">
 
-이런 식으로 상위요소인 menu-item에 주는 영향이 사라지면서 정상적인 float : left 지정이 된다 그 후에는 absolute의 속성인 절대위치를 지정하는 left나 top 등 아무런 값이 지정되지 않았기때문에 그 자리에 그냥 남는다 . 
+정상적인 float : left 지정이 된다 그 후에는 absolute의 속성인 절대위치를 지정하는 left나 top 등 아무런 값이 지정되지 않았기때문에 
 
-```html
-<li>
-          <span aria-hidden="true">:</span>
-          <a href="#">로그인</a>
-        </li>
-```
+그 자리에 그냥 남는다 . 
+
+
 
