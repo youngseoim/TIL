@@ -87,13 +87,20 @@ a태그에서 lole " button "도 가능
 
 #### Float 속성에 영향을 받는 하위요소에 position 값을 주지 않았을 때 벌어질 수 있는 문제
 
-![스크린샷 2020-07-16 오후 7.32.33](/Users/young/Library/Application Support/typora-user-images/스크린샷 2020-07-16 오후 7.32.33.png)
+<img width="876" alt="스크린샷 2020-07-16 오후 7 32 33" src="https://user-images.githubusercontent.com/68043654/87664315-ff967780-c79f-11ea-924c-b05652b3a7ad.png">
 
 
 
 menu-item 들을 float : left 속성 값을 줬을때  menu-item 의 자식 요소인 list들이 float:left 속성이 같이 먹어서 list들의 가로너비를 인식 이런식으로 원하는 menu-item들의 정렬이 이루어 지지 않고 오른쪽으로 밀려 최대 width 값을 벗어나 아래로 내려오는 현상이 생겼는데 이때 li 요소들한테 position absolute 값을 주면 
 
-![스크린샷 2020-07-16 오후 7.50.25](/Users/young/Library/Application Support/typora-user-images/스크린샷 2020-07-16 오후 7.50.25.png)
+<img width="920" alt="스크린샷 2020-07-16 오후 7 50 25" src="https://user-images.githubusercontent.com/68043654/87664356-0e7d2a00-c7a0-11ea-9e78-19a00f3ffa16.png">
 
 이런 식으로 상위요소인 menu-item에 주는 영향이 사라지면서 정상적인 float : left 지정이 된다 그 후에는 absolute의 속성인 절대위치를 지정하는 left나 top 등 아무런 값이 지정되지 않았기때문에 그 자리에 그냥 남는다 . 
+
+```html
+<li>
+          <span aria-hidden="true">:</span>
+          <a href="#">로그인</a>
+        </li>
+```
 
