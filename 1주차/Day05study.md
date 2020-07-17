@@ -32,7 +32,7 @@ Float 이 적용되면 다르게 동작하므로 음수 마진을 사용할 경�
 
 ### Postition -Normal Flow 일반 흐름 , 마크업한 순서대로 흘러간다 / Position는 Normal Flow 를 벗어나게한다
 
-- absolute는 주변배치에 영향을 준다,  top,left,right,bottom 값이 있으면 offset 페어런트 값 을 찾아간다  지정된 값이 없으면 컨텐츠 		
+- absolute는 주변배치에 영향을 준다,  top,left,right,bottom 값이 있으면 offset parents 값 을 찾아간다  지정된 값이 없으면 컨텐츠 		
 
   크기에 맞게 줄어들어서 배치된다 
 
@@ -61,11 +61,11 @@ Float 이 적용되면 다르게 동작하므로 음수 마진을 사용할 경�
 
 ```css
 .btn-menu{
-  background-color: transparent;								--- 부모의 컬러를 상속 받는다 
+  background-color: transparent;	-- 부모의 컬러를 상속 받는다 
   color: #fff;
   font-size: 1.6rem;
   font-weight: 700;
-  border:0;					--- semantic button태그의 기본속성으로 들어있는 border 값을 없애준다 안쪽의 흰색 border만 설정하기 위해
+  border:0;- semantic button태그의 기본속성으로 들어있는 border 값을 없애준다 안쪽의 흰색 border만 설정하기 위해
   cursor: pointer;
   border-left: 2px solid rgba(255,255,255,.5);
   text-shadow:   ---- 윤곽이 드러나게 text-shadow 효과를 준다 
@@ -160,7 +160,7 @@ Float 이 적용되면 다르게 동작하므로 음수 마진을 사용할 경�
 
   }
   100%{
-    font-size: 24px;					-- 점점 요소가 커지는 효과를 주기 위해서 시작지점과 폰트 사이즈를 다르게 지정했다		
+    font-size: 24px;	-- 점점 요소가 커지는 효과를 주기 위해서 시작지점과 폰트 사이즈를 다르게 지정했다		
     color: rgba(0, 0, 0, 1);  -- 점점 선명해지는 효과를 주기 위해서 시작지점의 값은 0,마지막 지점은 1로 지정해줬다(앞에 3개는 컬러)
     transform: translate(400px, 75px); ---시작지점 (0,0) 에서 400px, 75px 값 만큼 이동시키는 효과
   }
@@ -185,7 +185,9 @@ Float 이 적용되면 다르게 동작하므로 음수 마진을 사용할 경�
   height: 100%;
   background-repeat: no-repeat;
 }
-  --- position값을 absolute로 줌으로써 분리되며 top,left 값이 주어졌으니 offset parents값을 찾아가고 부모요소인 visual에 relative가 있으니 그 루트를 기준으로 0,0값인 가장 왼쪽 위로 요소가 붙어서 애니메이션이 시작된다,부모 요소 크기가 작아지거나 커질때 같이 움직이게 해주기 위해서 width, heigh 값에는 100%를 줬다
+  --- position값을 absolute로 줌으로써 분리되며 top,left 값이 주어졌으니 offset parents값을 찾아가고 부모요소
+visual에 relative가 있으니 그 루트를 기준으로 0,0값인 가장 왼쪽 위로 요소가 붙어서 애니메이션이 시작된다,부모 요소 크기
+가 작아지거나 커질때 같이 움직이게 해주기 위해서 width, heigh 값에는 100%를 줬다
 
 .visual::before{
   background-image: url(./images/ani_flower_01.png), url(./images/ani_flower_02.png);
@@ -200,7 +202,7 @@ Float 이 적용되면 다르게 동작하므로 음수 마진을 사용할 경�
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 2.4rem;
   width: 500px;
-  animation: textAni 500ms ease-in-out forwards;     ---- 애니메이션의 단축속성을 이용해서 
+  animation: textAni 500ms ease-in-out forwards; 
 }
 ```
 
