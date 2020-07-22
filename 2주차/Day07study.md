@@ -10,13 +10,13 @@
 
 - 고해상도 사진의 경우 svg로 코드화를 시키는게 어려울 수 있고 또 그냥 그 이미지 자체를 사용는경우가 많다 
 
-## Input 태그
+## Button 태그
 
 - action : 양식 데이터를 처리할 프로그램의 URI(Uniform Resource Identifier)  ㅡㅡ> 서버의 주소
   - input type "button"  ==> 요즘엔 이런형식보단 html의 button 태그로 많이 사용된다 value값을 할당해 주지 않으면 빈버튼이된다
     - 버튼이 뭐라도 하게하려면 javascript가 필요하다 
-  - Input type "submit" ==> 엑션으로 보낸다  
-  - Input type "image" ==> 버튼의 이미지가 씌워진다 
+  - Button type "submit" ==> 엑션으로 보낸다  
+  - Button type "image" ==> 버튼의 이미지가 씌워진다 
 - mathod : 양식을 제출할 때 사용할 HTTP 메소드 --post, get 차이 더 찾기 
   - Post: 양식데이터를 요청 본문으로 전송  
   - get :  action URL과 ? 구분자 뒤에 이어 붙여서 전송합니다 . 
